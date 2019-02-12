@@ -7,3 +7,15 @@
 [submodule "coinpush-nginx"]
 	path = coinpush-nginx
 	url = git@github.com:DutchKevv/coinpush-nginx.git
+[submodule "coinpush-docker-registry"]
+	path = coinpush-docker-registry
+	url = git@github.com:DutchKevv/coinpush-docker-registry.git
+[submodule "coinpush-client-web"]
+	path = coinpush-client-web
+	url = git@github.com:DutchKevv/coinpush-client-web.git
+[submodule "coinpush-client-app"]
+	path = coinpush-client-app
+	url = git@github.com:DutchKevv/coinpush-client-app.git
+[submodule "coinpush-shared"]
+	path = coinpush-shared
+	url = git@github.com:DutchKevv/coinpush-shared.git
