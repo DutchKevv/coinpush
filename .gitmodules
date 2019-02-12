@@ -1,0 +1,9 @@
+[submodule "coinpush"]
+	path = coinpush
+	url = git@github.com:DutchKevv/coinpush.git
+[submodule "coinpush-cdn"]
+	path = coinpush-cdn
+	url = git@github.com:DutchKevv/coinpush-cdn.git
+[submodule "coinpush-nginx"]
+	path = coinpush-nginx
+	url = git@github.com:DutchKevv/coinpush-nginx.git
