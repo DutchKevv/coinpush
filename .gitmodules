@@ -1,4 +1,4 @@
-[submodule "coinpush"]
+[submodule "coinpush-api"]
 	path = coinpush-api
 	url = git@github.com:DutchKevv/coinpush-api.git
 [submodule "coinpush-cdn"]
