@@ -4,7 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "update": "git submodule update --recursive --remote"
+    "start": "npm-run-all --parallel start-client start-server",
+    "start-client": "cd ./coinpush-client-web && npm start",
+    "start-server": "npm run start-api & npm run start-nginx & npm run start-cdn",
+    "start-api": "cd ./coinpush && npm start",
+    "start-nginx": "cd ./coinpush-nginx && npm start",
+    "start-cdn": "cd ./coinpush-cdn && npm start",
+    "build-client": "cd ./coinpush-client-web && npm run d-build",
+    "build-server": "cd ./coinpush && npm run build",
+    "update": "git submodule update --recursive --remote",
+    "commit": "",
+    "push": "",
+    "kill": "npm-run-all --parallel kill-client kill-server",
+    "kill-client": "cd ./coinpush-client-web && docker-compose kill",
+    "kill-server": "cd ./coinpush && docker-compose kill",
+    "d-rm": "docker-compose rm -f",
+    "d-rmi-none": "docker rmi $(docker images --filter 'dangling=true' -q --no-trunc)",
+    "d-rmi": "docker rmi -f $(docker images -q)",
+    "d-rmi-dangling": "docker rmi $(sudo docker images --filter \"dangling=true\" -q --no-trunc)",
+    "d-prune": "docker system prune -f",
+    "d-log": "docker-compose logs --tail=30 -f"
   },
   "repository": {
     "type": "git",
@@ -15,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/DutchKevv/coinpush-wrap/issues"
   },
-  "homepage": "https://github.com/DutchKevv/coinpush-wrap#readme"
+  "homepage": "https://github.com/DutchKevv/coinpush-wrap#readme",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }

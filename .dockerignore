@@ -1,0 +1,20 @@
+# editors
+**/.idea
+**/.vscode
+
+### global
+**/Dockerfile
+**/node_modules
+**/dist
+**/_log
+**/npm-debug.log
+**/.git
+**/.gitignore
+**/.DS_Store
+**/*.map
+**/*.md
+**/*.js
+**/*.yml
+**/*.txt
+**/*.log
+**/*.tmp
