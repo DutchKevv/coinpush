@@ -6,12 +6,18 @@
   "scripts": {
     "start": "npm-run-all --parallel start-client start-server",
     "start-client": "cd ./coinpush-client-web && npm start",
-    "start-server": "npm run start-api & npm run start-nginx & npm run start-cdn",
-    "start-api": "cd ./coinpush && npm start",
+    "start-server": "npm-run-all --parallel start-api start-nginx start-cdn",
+    "start-api": "cd ./coinpush-api && npm start",
     "start-nginx": "cd ./coinpush-nginx && npm start",
     "start-cdn": "cd ./coinpush-cdn && npm start",
+    
+    "build": "npm-run-all --parallel build-client build-server",
     "build-client": "cd ./coinpush-client-web && npm run d-build",
-    "build-server": "cd ./coinpush && npm run build",
+    "build-server": "npm-run-all --parallel build-api build-nginx build-cdn",
+    "build-api": "cd ./coinpush-api && npm run build",
+    "build-nginx": "cd ./coinpush-nginx && npm run build",
+    "build-cdn": "cd ./coinpush-cdn && npm run build",
+    
     "update": "git submodule update --recursive --remote",
     "commit": "",
     "push": "",
