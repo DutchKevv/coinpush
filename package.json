@@ -18,6 +18,7 @@
     "build-nginx": "cd ./coinpush-nginx && npm run build",
     "build-cdn": "cd ./coinpush-cdn && npm run build",
     
+    "init": "git submodule update --recursive --init",
     "update": "git submodule update --recursive --remote",
     "commit": "",
     "push": "",
