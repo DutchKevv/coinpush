@@ -11,6 +11,7 @@
 **/.git
 **/.gitignore
 **/.DS_Store
+**/package-lock.json
 **/*.map
 **/*.md
 **/*.js
