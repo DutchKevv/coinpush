@@ -11,7 +11,6 @@
     "start-api": "cd ./coinpush-api && npm start",
     "start-nginx": "cd ./coinpush-nginx && npm start",
     "start-cdn": "cd ./coinpush-cdn && npm start",
-    
     "build": "npm-run-all --parallel build-client build-server",
     "build-client-web": "cd ./coinpush-client-web && npm run d-build -- --no-cache",
     "build-client-app": "cd ./coinpush-client-app && npm run d-build -- --no-cache",
@@ -19,7 +18,6 @@
     "build-api": "cd ./coinpush-api && npm run build -- --no-cache",
     "build-nginx": "cd ./coinpush-nginx && npm run build -- --no-cache",
     "build-cdn": "cd ./coinpush-cdn && npm run build -- --no-cache",
-
     "kill": "npm-run-all --parallel kill-client kill-server",
     "kill-client-web": "cd ./coinpush-client-web && docker-compose kill",
     "kill-client-app": "cd ./coinpush-client-app && docker-compose kill",
@@ -27,7 +25,6 @@
     "kill-api": "cd ./coinpush-api && docker-compose kill",
     "kill-nginx": "cd ./coinpush-nginx && docker-compose kill",
     "kill-cdn": "cd ./coinpush-cdn && docker-compose kill",
-
     "rm": "npm-run-all --parallel rm-client rm-server",
     "rm-client-web": "cd ./coinpush-client-web && docker-compose rm -f",
     "rm-client-app": "cd ./coinpush-client-app && docker-compose rm -f",
@@ -35,18 +32,19 @@
     "rm-api": "cd ./coinpush-api && docker-compose rm -f",
     "rm-nginx": "cd ./coinpush-nginx && docker-compose rm -f",
     "rm-cdn": "cd ./coinpush-cdn && docker-compose rm -f",
-
     "d-rm": "docker-compose rm -f",
     "d-rmi-none": "docker rmi $(docker images --filter 'dangling=true' -q --no-trunc)",
     "d-rmi": "docker rmi -f $(docker images -q)",
     "d-rmi-dangling": "docker rmi $(sudo docker images --filter \"dangling=true\" -q --no-trunc)",
     "d-prune": "docker system prune -f",
     "d-log": "docker-compose logs --tail=30 -f",
-
     "init": "npm i && git submodule update --recursive --init",
     "update": "git submodule update --recursive --remote",
     "commit": "",
-    "push": ""
+    "push": "",
+    "switch": "eval $(minikube docker-env)",
+    "k-adm-init": "sudo kubeadm init --pod-network-cidr=192.168.0.0/16 && kubectl proxy",
+    "k-adm-open": "xdg-open http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy/#!/overview?namespace=default"
   },
   "repository": {
     "type": "git",

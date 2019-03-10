@@ -19,3 +19,6 @@
 [submodule "coinpush-shared"]
 	path = coinpush-shared
 	url = git@github.com:DutchKevv/coinpush-shared.git
+[submodule "coinpush-mongo"]
+	path = coinpush-mongo
+	url = git@github.com:DutchKevv/coinpush-mongo.git

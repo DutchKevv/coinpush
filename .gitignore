@@ -1,7 +1,5 @@
 .idea
 .vscode
 
-/static
 node_modules
-
 npm-debug.log
