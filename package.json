@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel start-client start-server",
+    "start": "npm-run-all --parallel start-client-web start-api",
     "start-client-web": "cd ./coinpush-client-web && docker-compose up",
     "start-client-app": "cd ./coinpush-client-app && docker-compose up",
     "start-server": "npm-run-all --parallel start-api start-nginx start-cdn",
