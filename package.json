@@ -43,8 +43,10 @@
     "commit": "",
     "push": "",
     "switch": "eval $(minikube docker-env)",
+    "k-mnt": "minikube mount /path/to/dir/to/mount:/mnt/",
     "k-adm-init": "sudo kubeadm init --pod-network-cidr=192.168.0.0/16 && kubectl proxy",
-    "k-adm-open": "xdg-open http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy/#!/overview?namespace=default"
+    "k-adm-open-mac": "open -a 'Google Chrome' http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy/#!/overview?namespace=default",
+    "k-adm-open-linux": "xdg-open http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy/#!/overview?namespace=default"
   },
   "repository": {
     "type": "git",
