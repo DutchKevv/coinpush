@@ -1,23 +1,39 @@
+# system
+**/.DS_Store
+
 # editors
 **/.idea
 **/.vscode
+**/.project
+**/.classpath
+**/.c9/
+**/*.launch
+**/.settings
+**/*.sublime-workspace
+**/.editorconfig
 
-### global
-**/Dockerfile
-**/node_modules
-**/dist
-**/_log
-**/npm-debug.log
+# git
 **/.git
 **/.gitignore
-**/.DS_Store
+
+# docker
+**/Dockerfile
+**/docker-compos*.yml
+**/.dockerignore
+
+# nodejs
+**/node_modules
 **/package-lock.json
+**/npm-debug.log
+
+# files
+**/dist
 **/*.map
 **/*.md
 **/*.js
-**/*.yml
 **/*.txt
 **/*.log
 **/*.tmp
 
+# exclude
 !**/_config/**/*.js

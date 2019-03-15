@@ -22,3 +22,6 @@
 [submodule "coinpush-mongo"]
 	path = coinpush-mongo
 	url = git@github.com:DutchKevv/coinpush-mongo.git
+[submodule "coinpush-client-admin"]
+	path = coinpush-client-admin
+	url = git@github.com:DutchKevv/coinpush-client-admin.git
