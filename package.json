@@ -9,7 +9,7 @@
     "commit": "",
     "push": "",
     "start": "npm-run-all --parallel start-clients start-servers",
-    "start-clients": "npm-run-all --parallel start-client-admin start-client-app start-client-web",
+    "start-clients": "npm-run-all --parallel start-client-admin start-client-web",
     "start-client-admin": "cd ./coinpush-client-admin && npm run d-start",
     "start-client-app": "cd ./coinpush-client-app && npm run d-start",
     "start-client-web": "cd ./coinpush-client-web && npm run d-start",
